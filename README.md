@@ -19,12 +19,8 @@
 I'm a **DevSecOps Engineer** based in **Lugano, Switzerland**. I moved from full-stack development to cloud-native infrastructure and never looked back.
 
 - 🏅 **CKA · CKAD · KCNA · KCSA** · Sysdig Kraken Hunter · Snyk Certified Technical Professional
-- 🔭 Running a **homelab Kubernetes cluster** where mistakes are welcome (it's called learning)
 - 🤖 Running **local LLMs** (llama.cpp, Ollama) on an RTX 4070 Ti and a DGX Spark, and testing frontier models on real workflows
-- 🎤 Speaker at **Linux Day Avellino 2024**
 - 📝 Writing about DevOps, cloud-native, and AI at [alfonsofortunato.com](https://alfonsofortunato.com)
-
-<img src="./assets/pipeline.svg" width="100%" alt="git push → build → test → trivy scan → cosign sign → argocd sync → running" />
 
 ---
 
@@ -36,9 +32,6 @@ I'm a **DevSecOps Engineer** based in **Lugano, Switzerland**. I moved from full
 | [Sparkfire](https://github.com/devopsfortunato/Sparkfire) | Local-first AI workspace for one DGX Spark — OCR, speech, translation, images, and video | ⭐ 7 |
 | [demo-avellino-linux-day-2024](https://github.com/devopsfortunato/demo-avellino-linux-day-2024) | Linux Day 2024 demo: secure your container images with Trivy and Copacetic | ⭐ 6 |
 | [Qwen3.8-Flash-Next-FP4-Local-DGX-Spark](https://github.com/devopsfortunato/Qwen3.8-Flash-Next-FP4-Local-DGX-Spark) | One-command recipe to serve Qwen3.8-Flash-Next FP4 on a single DGX Spark | ⭐ 3 |
-| [homelab-k8s](https://github.com/devopsfortunato/homelab-k8s) | My Homelab Kubernetes playground — where mistakes are the curriculum | ⭐ 3 |
-| [note-cli](https://github.com/devopsfortunato/note-cli) | CLI for Zettelkasten-style notes, integrating Neovim & Obsidian | ⭐ 2 |
-| [telescope-ghissue.nvim](https://github.com/devopsfortunato/telescope-ghissue.nvim) | Neovim Telescope plugin for browsing GitHub issues in-editor | ⭐ 1 |
 
 ---
 
@@ -51,12 +44,3 @@ I'm a **DevSecOps Engineer** based in **Lugano, Switzerland**. I moved from full
 - [DeepSeek V4 Flash on a Single DGX Spark](https://alfonsofortunato.com/blog/deepseek-v4-flash-on-a-single-dgx-spark/)
 - [Running Laguna S 2.1 on a DGX Spark](https://alfonsofortunato.com/blog/running-laguna-s2-1-on-dgx-spark/)
 <!-- BLOG-POST-LIST:END -->
-
----
-
-## 📊 GitHub Stats
-
-<div align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=devopsfortunato&show_icons=true&theme=tokyonight&count_private=true&hide_border=true&bg_color=1a1b27" alt="GitHub stats" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=devopsfortunato&layout=compact&langs_count=8&theme=tokyonight&hide_border=true&bg_color=1a1b27" alt="Top languages" />
-</div>
