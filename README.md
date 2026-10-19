@@ -43,10 +43,10 @@ I'm a **DevSecOps Engineer** based in **Lugano, Switzerland**. I moved from full
 
 | Project | Description | Stars |
 |---------|-------------|:-----:|
-| [devpod-dotfiles-chezmoi](https://github.com/MovieMaker93/devpod-dotfiles-chezmoi) | Cross-platform dotfiles for Zsh, Tmux, Neovim & Bitwarden — works on workstations, DevPods, and DevContainers | ⭐ 26 |
-| [homelab-k8s](https://github.com/MovieMaker93/homelab-k8s) | My Homelab Kubernetes playground — where mistakes are the curriculum | ⭐ 3 |
-| [note-cli](https://github.com/MovieMaker93/note-cli) | CLI for Zettelkasten-style notes, integrating Neovim & Obsidian | ⭐ 2 |
-| [telescope-ghissue.nvim](https://github.com/MovieMaker93/telescope-ghissue.nvim) | Neovim Telescope plugin for browsing GitHub issues in-editor | ⭐ 1 |
+| [devpod-dotfiles-chezmoi](https://github.com/devopsfortunato/devpod-dotfiles-chezmoi) | Cross-platform dotfiles for Zsh, Tmux, Neovim & Bitwarden — works on workstations, DevPods, and DevContainers | ⭐ 26 |
+| [homelab-k8s](https://github.com/devopsfortunato/homelab-k8s) | My Homelab Kubernetes playground — where mistakes are the curriculum | ⭐ 3 |
+| [note-cli](https://github.com/devopsfortunato/note-cli) | CLI for Zettelkasten-style notes, integrating Neovim & Obsidian | ⭐ 2 |
+| [telescope-ghissue.nvim](https://github.com/devopsfortunato/telescope-ghissue.nvim) | Neovim Telescope plugin for browsing GitHub issues in-editor | ⭐ 1 |
 
 ---
 
@@ -65,6 +65,6 @@ I'm a **DevSecOps Engineer** based in **Lugano, Switzerland**. I moved from full
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=MovieMaker93&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=1a1b27" alt="GitHub stats" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MovieMaker93&layout=compact&langs_count=8&theme=tokyonight&hide_border=true&bg_color=1a1b27" alt="Top languages" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=devopsfortunato&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=1a1b27" alt="GitHub stats" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=devopsfortunato&layout=compact&langs_count=8&theme=tokyonight&hide_border=true&bg_color=1a1b27" alt="Top languages" />
 </div>

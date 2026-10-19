@@ -189,7 +189,7 @@ export async function fetchStarCount(
   const url = `https://api.github.com/repos/${owner}/${repo}`;
   const headers = {
     accept: "application/vnd.github+json",
-    "user-agent": "MovieMaker93-profile-readme-updater",
+    "user-agent": "devopsfortunato-profile-readme-updater",
     "x-github-api-version": "2022-11-28",
   };
   if (token) {

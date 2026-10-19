@@ -224,7 +224,7 @@ test("fetches a repository's star count from GitHub", async () => {
   assert.equal(requests[0].init.headers.accept, "application/vnd.github+json");
   assert.equal(
     requests[0].init.headers["user-agent"],
-    "MovieMaker93-profile-readme-updater",
+    "devopsfortunato-profile-readme-updater",
   );
   assert.equal(requests[0].init.headers["x-github-api-version"], "2022-11-28");
 });

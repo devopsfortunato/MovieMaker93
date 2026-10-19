@@ -79,7 +79,7 @@ export async function fetchText(
   for (let attempt = 1; attempt <= attempts; attempt += 1) {
     try {
       const response = await fetchImpl(url, {
-        headers: { "user-agent": "MovieMaker93-profile-readme-updater" },
+        headers: { "user-agent": "devopsfortunato-profile-readme-updater" },
         redirect: "follow",
         signal: AbortSignal.timeout(15_000),
       });
