@@ -28,17 +28,6 @@ I'm a **DevSecOps Engineer** based in **Lugano, Switzerland**. I moved from full
 
 ---
 
-## 🛠️ Tech Stack
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=go,rust,python,java,lua,bash,kubernetes,docker,terraform,ansible,aws&perline=11" alt="Languages and infrastructure" /><br/>
-  <img src="https://skillicons.dev/icons?i=azure,gcp,linux,githubactions,gitlab,jenkins,grafana,prometheus,neovim,obsidian&perline=11" alt="Cloud, CI/CD and tools" />
-</p>
-
-<p align="center"><sub>Also: Vault · ArgoCD · Trivy · Dagger · tmux · Ollama · Claude · LangChain</sub></p>
-
----
-
 ## 🚀 Featured Projects
 
 | Project | Description | Stars |
