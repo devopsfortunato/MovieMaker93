@@ -53,11 +53,11 @@ I'm a **DevSecOps Engineer** based in **Lugano, Switzerland**. I moved from full
 ## 📝 Latest from the Blog
 
 <!-- BLOG-POST-LIST:START -->
+- [One DGX Spark, four ways to serve Qwen3.8-Flash-Next](https://alfonsofortunato.com/blog/one-dgx-spark-four-ways-to-serve-qwen3-8-flash-next/)
 - [Why I'm Betting on Local AI (and How You Can Start)](https://alfonsofortunato.com/blog/why-im-betting-on-local-ai/)
 - [DeepSeek V4 Flash vs GLM 5.3 Flash: Who Wins on a Single Spark?](https://alfonsofortunato.com/blog/deepseek-v4-flash-vs-glm-5-3-flash-who-wins-on-a-single-spark/)
 - [DeepSeek V4 Flash on a Single DGX Spark](https://alfonsofortunato.com/blog/deepseek-v4-flash-on-a-single-dgx-spark/)
 - [Running Laguna S 2.1 on a DGX Spark](https://alfonsofortunato.com/blog/running-laguna-s2-1-on-dgx-spark/)
-- [My Obsidian PKM Setup: Karpathy's LLM Wiki + Claude Code + Local Search](https://alfonsofortunato.com/blog/obsidian-pkm-llm-wiki/)
 <!-- BLOG-POST-LIST:END -->
 
 ---
