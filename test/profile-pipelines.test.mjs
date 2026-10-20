@@ -23,19 +23,30 @@ test("blog updater uses the local script", () => {
 });
 
 test("profile workflow runs each updater once before committing with a scoped token", () => {
-  const blogCommand = "node scripts/update-blog-posts.mjs";
-  const starStep = `      - name: Update featured project stars
-        run: node scripts/update-project-stars.mjs
-        env:
-          GITHUB_TOKEN: \${{ secrets.GITHUB_TOKEN }}`;
+  const blogCommand = "run: node scripts/update-blog-posts.mjs";
+  const starCommand = "run: node scripts/update-project-stars.mjs";
   const commitStep = "      - name: Commit README";
 
   assert.match(blogWorkflow, /^  update-profile-content:/m);
   assert.equal(blogWorkflow.split(blogCommand).length - 1, 1);
-  assert.equal(blogWorkflow.split("node scripts/update-project-stars.mjs").length - 1, 1);
+  assert.equal(blogWorkflow.split(starCommand).length - 1, 1);
   assert.equal(blogWorkflow.split("git commit").length - 1, 1);
   assert.equal(blogWorkflow.split("GITHUB_TOKEN:").length - 1, 1);
-  assert.ok(blogWorkflow.indexOf(blogCommand) < blogWorkflow.indexOf(starStep));
-  assert.ok(blogWorkflow.indexOf(starStep) < blogWorkflow.indexOf(commitStep));
-  assert.equal(blogWorkflow.indexOf("GITHUB_TOKEN:"), blogWorkflow.indexOf(starStep) + starStep.indexOf("GITHUB_TOKEN:"));
+  assert.ok(blogWorkflow.indexOf(blogCommand) < blogWorkflow.indexOf(starCommand));
+  assert.ok(blogWorkflow.indexOf(starCommand) < blogWorkflow.indexOf(commitStep));
+  assert.match(
+    blogWorkflow,
+    /    env:\n      GITHUB_TOKEN: \$\{\{ secrets\.GITHUB_TOKEN \}\}/,
+  );
+});
+
+test("commit step retries with fresh main content when a push is rejected", () => {
+  assert.match(blogWorkflow, /for attempt in 1 2 3; do/);
+  assert.match(blogWorkflow, /if git push; then/);
+  assert.match(blogWorkflow, /git fetch origin main/);
+  assert.match(blogWorkflow, /git reset --hard origin\/main/);
+  assert.match(
+    blogWorkflow,
+    /node scripts\/update-blog-posts\.mjs\n\s+node scripts\/update-project-stars\.mjs/,
+  );
 });

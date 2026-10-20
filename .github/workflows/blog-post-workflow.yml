@@ -16,6 +16,8 @@ jobs:
   update-profile-content:
     name: Update README profile content
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
       - name: Checkout
@@ -26,18 +28,32 @@ jobs:
 
       - name: Update featured project stars
         run: node scripts/update-project-stars.mjs
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit README
         run: |
-          if git diff --quiet -- README.md; then
-            echo "README is already up to date"
-            exit 0
-          fi
-
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git commit -m "docs: update profile content"
-          git push
+
+          for attempt in 1 2 3; do
+            if git diff --quiet -- README.md; then
+              echo "README is already up to date"
+              exit 0
+            fi
+
+            git add README.md
+            git commit -m "docs: update profile content"
+
+            if git push; then
+              exit 0
+            fi
+
+            echo "Push rejected on attempt ${attempt}; refreshing from main" >&2
+            git fetch origin main
+            git reset --hard origin/main
+            node scripts/update-blog-posts.mjs
+            node scripts/update-project-stars.mjs
+            sleep $((attempt * 5))
+          done
+
+          echo "Could not publish README update after 3 attempts" >&2
+          exit 1
