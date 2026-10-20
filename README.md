@@ -31,7 +31,7 @@ I'm a **DevSecOps Engineer** based in **Lugano, Switzerland**. I moved from full
 | [devpod-dotfiles-chezmoi](https://github.com/devopsfortunato/devpod-dotfiles-chezmoi) | Cross-platform dotfiles for Zsh, Tmux, Neovim & Bitwarden — works on workstations, DevPods, and DevContainers | ⭐ 26 |
 | [Sparkfire](https://github.com/devopsfortunato/Sparkfire) | Local-first AI workspace for one DGX Spark — OCR, speech, translation, images, and video | ⭐ 7 |
 | [demo-avellino-linux-day-2024](https://github.com/devopsfortunato/demo-avellino-linux-day-2024) | Linux Day 2024 demo: secure your container images with Trivy and Copacetic | ⭐ 6 |
-| [Qwen3.8-Flash-Next-FP4-Local-DGX-Spark](https://github.com/devopsfortunato/Qwen3.8-Flash-Next-FP4-Local-DGX-Spark) | One-command recipe to serve Qwen3.8-Flash-Next FP4 on a single DGX Spark | ⭐ 3 |
+| [Qwen3.8-Flash-Next-FP4-Local-DGX-Spark](https://github.com/devopsfortunato/Qwen3.8-Flash-Next-FP4-Local-DGX-Spark) | One-command recipe to serve Qwen3.8-Flash-Next FP4 on a single DGX Spark | ⭐ 5 |
 
 ---
 
