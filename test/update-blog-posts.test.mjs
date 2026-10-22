@@ -24,6 +24,22 @@ test("selects the newest articles and decodes their RSS titles", () => {
   );
 });
 
+test("accepts articles under both /blog/ and /writing/ URL layouts", () => {
+  const rss = `
+    <rss><channel>
+      <item><title>Old layout</title><link>https://example.com/blog/old-layout/</link><pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate></item>
+      <item><title>New layout</title><link>https://example.com/writing/new-layout.html</link><pubDate>Thu, 01 Jan 2026 00:00:00 GMT</pubDate></item>
+      <item><title>Blog index</title><link>https://example.com/blog/</link><pubDate>Fri, 02 Jan 2026 00:00:00 GMT</pubDate></item>
+      <item><title>Writing index</title><link>https://example.com/writing</link><pubDate>Sat, 03 Jan 2026 00:00:00 GMT</pubDate></item>
+      <item><title>Home page</title><link>https://example.com/</link><pubDate>Sun, 04 Jan 2026 00:00:00 GMT</pubDate></item>
+    </channel></rss>`;
+
+  assert.deepEqual(
+    latestBlogUrls(rss).map(({ title }) => title),
+    ["New layout", "Old layout"],
+  );
+});
+
 test("replaces only the content inside the blog markers", () => {
   const readme = `Before
 <!-- BLOG-POST-LIST:START -->

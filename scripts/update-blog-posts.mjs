@@ -5,6 +5,23 @@ const README_PATH = new URL("../README.md", import.meta.url);
 const START_MARKER = "<!-- BLOG-POST-LIST:START -->";
 const END_MARKER = "<!-- BLOG-POST-LIST:END -->";
 const MAX_POSTS = 5;
+// The site has published articles under /blog/ and, since the 2026 move,
+// under /writing/ (with an .html suffix). Keep both so the feed migration
+// does not silently hide every post.
+const ARTICLE_PATH_PREFIXES = ["/blog/", "/writing/"];
+
+function isArticleUrl(url) {
+  let path;
+  try {
+    path = new URL(url).pathname;
+  } catch {
+    return false;
+  }
+
+  return ARTICLE_PATH_PREFIXES.some(
+    (prefix) => path.startsWith(prefix) && path.length > prefix.length,
+  );
+}
 
 export function decodeHtmlEntities(value) {
   const namedEntities = {
@@ -38,8 +55,7 @@ export function latestBlogUrls(rss, limit = MAX_POSTS) {
     }))
     .filter(({ title, url, published }) => {
       if (!title || !url || !Number.isFinite(published)) return false;
-      const path = new URL(url).pathname.replace(/\/$/, "");
-      return path.startsWith("/blog/") && path !== "/blog";
+      return isArticleUrl(url);
     })
     .sort((a, b) => b.published - a.published)
     .slice(0, limit);
@@ -104,7 +120,9 @@ async function main() {
   const rss = await fetchText(RSS_URL);
   const posts = latestBlogUrls(rss);
   if (posts.length === 0) {
-    throw new Error("No blog posts found in the RSS feed");
+    throw new Error(
+      `No blog posts found in the RSS feed (expected links under ${ARTICLE_PATH_PREFIXES.join(" or ")})`,
+    );
   }
 
   const readme = await readFile(README_PATH, "utf8");

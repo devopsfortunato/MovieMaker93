@@ -23,7 +23,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - name: Update latest blog posts from sitemap
+      - name: Run pipeline tests
+        run: node --test test/*.test.mjs
+
+      - name: Update latest blog posts from RSS feed
         run: node scripts/update-blog-posts.mjs
 
       - name: Update featured project stars
