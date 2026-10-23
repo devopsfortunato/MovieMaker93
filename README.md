@@ -38,7 +38,7 @@ I'm a **DevSecOps Engineer** based in **Lugano, Switzerland**. I moved from full
 ## 📝 Latest from the Blog
 
 <!-- BLOG-POST-LIST:START -->
-- [Update 2: Qwen3.8 Flash Next on one DGX Spark, with NVIDIA Flare tests and the new myllmbox recipe](https://alfonsofortunato.com/writing/update-2-qwen3-8-flash-next-on-one-dgx-spark.html)
+- [vLLM vs NVIDIA Flare vs myllmbox vs TensorFold on one DGX Spark: I measured six ways to serve Qwen3.8 Flash Next](https://alfonsofortunato.com/writing/six-ways-to-serve-qwen3-8-flash-next-on-one-dgx-spark.html)
 - [One DGX Spark, four ways to serve Qwen3.8-Flash-Next](https://alfonsofortunato.com/writing/one-dgx-spark-four-ways-to-serve-qwen3-8-flash-next.html)
 - [Why I'm Betting on Local AI (and How You Can Start)](https://alfonsofortunato.com/writing/why-im-betting-on-local-ai.html)
 - [DeepSeek V4 Flash vs GLM 5.3 Flash: Who Wins on a Single Spark?](https://alfonsofortunato.com/writing/deepseek-v4-flash-vs-glm-5-3-flash-who-wins-on-a-single-spark.html)
